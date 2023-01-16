@@ -5,6 +5,7 @@ import Login from "./components/Login";
 
 
 
+
 // Header component
 const Header = () => (
   <header className="header">
@@ -38,10 +39,11 @@ const Nav = () => {
 // Main component
 function Main() {
   return (
-    <main className="main">
-      <Menu id="menu" />
-      <ReserveATable id="reserve-a-table" />
-      <OrderOnline id="order-online" />
+    
+    <main className="Home">
+      <Menu id="Menu" />
+      <ReserveATable id="Reserve" />
+      <OrderOnline id="Order" />
     </main>
   );
 }
