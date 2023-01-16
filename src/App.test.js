@@ -1,8 +1,19 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, fireEvent, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("Adds one", () => {
+  // render the App component
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  // save the heading in a variable
+  const heading = screen.getByTestId("currentNumber");
+
+  // save the button in a variable
+  const btn = screen.getByTestId("addOne");
+
+  // click the btn
+  fireEvent.click(btn);
+
+  // test assumption
+  expect(heading).toHaveTextContent("2");
 });
