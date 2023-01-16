@@ -13,7 +13,7 @@ const Menu = () => (
     <h2 className="menu__title">Our Menu</h2>
     <div className="menu__items">
       {menuItems.map(item => (
-        <div key={item} className="menu__item-card">
+        <div key={item.name} className="menu__item-card">
             <img src={item.img} alt={item.name} className="menu__item-img" />
             <h3 className="menu__item-name">{item.name}</h3>
             <p className="menu__item-price">{item.price}</p>
